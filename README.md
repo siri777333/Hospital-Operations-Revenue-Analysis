@@ -123,3 +123,15 @@ This resulted in a **49% appointment loss rate**, in which nearly **one out of e
 ## Business Impact
 
 The dashboard provides hospital management with actionable insights to improve revenue recovery, reduce appointment losses, optimize workforce allocation, identify high-value patients, and support data-driven operational decision-making.
+
+#  Author
+
+**Siri Chandana**
+
+**M.Pharm (Pharmaceutics) Graduate | Aspiring Healthcare & Pharma Data Analyst**
+
+**Skills:** MSSQL Server • Power BI • Excel • Healthcare Analytics • Data Visualization • Business Intelligence •Statistics Fundamentals
+•Python Fundamentals
+
+This project reflects my transition from a pharmaceutical background into data analytics by combining healthcare domain expertise with data-driven decision-making.
+ 
