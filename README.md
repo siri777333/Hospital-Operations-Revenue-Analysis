@@ -4,18 +4,17 @@
 
 ## Project Overview
 
-Developed an end-to-end healthcare analytics solution using SQL Server and Power BI to analyze hospital operations, revenue performance, workforce utilization, and patient behavior.
-Built on a 5-table relational database containing Patients, Doctors, Appointments, Treatments, and Billing data. Created 11 SQL queries using CTEs, Window Functions, Multi-Table JOINs, Conditional Aggregation, and Ranking Functions, then transformed the results into a 2-page interactive Power BI dashboard.
+Developed an end-to-end Hospital Operations & Revenue Analysis solution using SQL Server and Power BI to evaluate financial performance, operational efficiency, workforce utilization, and patient behavior across a multi-branch healthcare organization.
+
+The project was built on a relational database consisting of five interconnected tables: Patients, Doctors, Appointments, Treatments, and Billing. Using advanced SQL techniques including Common Table Expressions (CTEs), Window Functions, Multi-Table JOINs, Conditional Aggregation, and Ranking Functions, I analyzed hospital operations and transformed the results into a two-page interactive Power BI dashboard designed to support data-driven decision-making.
 
 ## Tools & Technologies
-* SQL Server
-* Power BI
-* DAX
-* SQL
-* Data Visualization
+* SQL Server – Data extraction, transformation, querying, and business analysis
+* Power BI – Dashboard development, KPI tracking, and interactive visualizations
+* DAX – Additional calculations and performance metrics
 * Healthcare Analytics
 
-## 📊 Key Metrics
+##  Key Metrics
 
 | Metric                           | Value           |
 | -------------------------------- | --------------- |
@@ -29,43 +28,52 @@ Built on a 5-table relational database containing Patients, Doctors, Appointment
 ##  Key Business Insights
 
 ### Revenue Leakage
-
-Identified unpaid treatments across multiple categories, including **36 Chemotherapy** and **29 ECG** cases, helping prioritize revenue recovery efforts.
+A significant number of treatments were completed without successful payment collection. Analysis identified **36 unpaid Chemotherapy cases** and **29 unpaid ECG cases**, along with additional unpaid treatments across MRI, X-Ray, and Physiotherapy services.
+Using a **LEFT JOIN** between the Treatments and Billing tables, pending and failed payment records were isolated and visualized through a **Power BI Treemap**, enabling finance teams to quickly identify high-priority revenue recovery opportunities.
 
 ### Doctor Performance Analysis
-
-Measured doctor-level completion, cancellation, and no-show rates to support performance evaluation and operational planning.
+The hospital lacked visibility into individual doctor performance and appointment outcomes.
+Using **CTEs and CASE WHEN conditional aggregation, completion rates, cancellation rates, and no-show rates were calculated for each doctor**. 
+The analysis revealed that **Doctor D005 handled the highest appointment** volume with **29 appointments**, highlighting significant workload variation across physicians.
 
 ### Patient Lifetime Value
-
-Ranked patients by total revenue contribution using SQL Window Functions to identify high-value patients for retention strategies.
+A patient lifetime revenue model was developed using **CTEs and the RANK() Window Function** to identify high-value patients.
+The analysis found an average patient **lifetime revenue of ₹57.26K**, enabling the identification of patients who contribute disproportionately to overall revenue and may benefit from targeted retention initiatives.
 
 ### Specialization Revenue Analysis
-
-* Oncology: ₹259K (47%)
-* Dermatology: ₹203K (37%)
-* Pediatrics: ₹90K (16%)
-
-Revealed a significant revenue gap between medical specializations.
+Revenue contribution was analyzed across medical departments by combining Doctors, Appointments, and Billing data.
+**Oncology generated ₹259K (47%)**
+**Dermatology generated ₹203K (37%)**
+**Pediatrics generated ₹90K (16%)**
+These findings revealed a significant revenue imbalance between specializations and provide valuable input for resource allocation and growth planning.
 
 ### Branch Workload Analysis
-
-Detected workload imbalance across hospital branches, with Central Hospital and Eastside Clinic handling more appointments per doctor than Westside Clinic.
+Appointment volumes were evaluated across all hospital locations to assess workforce utilization.
+The analysis showed that **Central Hospital and Eastside Clinic averaged 21 appointments per doctor**, while **Westside Clinic averaged 18 appointments per doctor**, indicating opportunities for workload balancing and resource optimization.
 
 ### Senior Doctor ROI Analysis
-
-Compared doctor experience with generated revenue and found that higher experience did not always translate into higher financial performance.
+The relationship between experience and financial performance was assessed by analyzing doctors with more than 20 years of experience.
+The highest revenue was generated by **D005 (28 years experience) with ₹83K, while D006 (24 years experience) generated ₹70K**, outperforming some more experienced physicians. These findings demonstrate that experience alone does not necessarily predict revenue contribution.
 
 ### Monthly Revenue Trends
-
-Tracked monthly revenue fluctuations and identified a 56% decline from the yearly peak to the lowest-performing month.
+Monthly revenue performance was analyzed to identify trends and seasonality.
+Revenue **increased to a peak of ₹64K in April 2023 before declining to ₹28K in December 2023, representing a 56% decrease**. This analysis provides a foundation for forecasting and proactive financial planning.
 
 ##  Critical Finding
-
 Out of 200 appointments:
 * 51 Cancelled (25.5%)
 * 46 No-Shows (23%)
-This resulted in a **49% appointment loss rate**, making missed appointments the largest operational and revenue challenge identified in the analysis.
+This resulted in a **49% appointment loss rate**, in which nearly **one out of every two scheduled appointments failed to generate revenue, highlighting the need for stronger appointment reminder systems, patient communication strategies, and follow-up processes**.
+
+## 📋 Business Recommendations
+
+* Implement automated appointment reminders and follow-up processes to reduce the **49% appointment loss rate** caused by cancellations and no-shows.
+* Strengthen payment collection procedures for treatments with high volumes of unpaid bills, particularly **Chemotherapy (36 cases)** and **ECG (29 cases)**.
+* Allocate additional resources and investment to **Oncology**, which generated **₹259K (47% of total revenue)** and was the highest-performing specialization.
+* Optimize workforce distribution across hospital branches to improve resource utilization and balance doctor workloads.
+* Develop retention programs for high-value patients identified through lifetime revenue analysis to maximize long-term revenue generation.
+* Monitor doctor performance using completion, cancellation, and no-show rates to support data-driven operational improvements.
+* Use monthly revenue trends and historical performance data to improve financial forecasting and resource planning.
 
 ## Dashboard Highlights
 ### Page 1 – Financial & Doctor Overview
