@@ -130,11 +130,10 @@ The dashboard provides hospital management with actionable insights to improve r
 
 **M.Pharm (Pharmaceutics) Graduate | Aspiring Healthcare & Pharma Data Analyst**
 
-**Skills:** MSSQL Server • Power BI • Excel • Healthcare Analytics • Data Visualization • Business Intelligence •Statistics Fundamentals
-•Python Fundamentals
+**Skills:** MSSQL Server • Power BI • Excel • Healthcare Analytics • Data Visualization • Business Intelligence •Statistics 
+•Python
 
 This project reflects my transition from a pharmaceutical background into data analytics by combining healthcare domain expertise with data-driven decision-making.
 
 ---
 
-Two extra corrections beyond what we'd already caught: the **Senior Doctor ROI section** had D005 listed as "28 years experience" and D006 as "24 years" — the verified data shows D005 is actually **26 years** and D006 is **23 years** (the revenue figures ₹83K/₹70K were already correct, just the experience years were off). And the Critical Finding section had **46 No-Shows**, corrected to **52 No-Shows** to match the verified 51.5% loss rate.
